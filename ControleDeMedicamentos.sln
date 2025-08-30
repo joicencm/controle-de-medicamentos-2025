@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeMedicamentos.Dominio", "ControleDeMedicamentos\ControleDeMedicamentos.Dominio.csproj", "{598528B5-3159-4637-9AEA-BD765574B1E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Apresentanção", "1.Apresentanção", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Dominío", "2.Dominío", "{7B4F4969-EF5C-4861-8A46-A1F103AB1C11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Infraestrutura", "3.Infraestrutura", "{9F6C52CC-8048-4C42-92BE-778788D1DE9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeMedicamentos.Infraestrutura.Arquivos", "ControleDeMedicamentos.Infraestrutura.Arquivos\ControleDeMedicamentos.Infraestrutura.Arquivos.csproj", "{CC1875FB-D172-40E6-A3F1-196D10B0632F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,17 @@ Global
 		{598528B5-3159-4637-9AEA-BD765574B1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{598528B5-3159-4637-9AEA-BD765574B1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{598528B5-3159-4637-9AEA-BD765574B1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC1875FB-D172-40E6-A3F1-196D10B0632F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1875FB-D172-40E6-A3F1-196D10B0632F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1875FB-D172-40E6-A3F1-196D10B0632F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1875FB-D172-40E6-A3F1-196D10B0632F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{598528B5-3159-4637-9AEA-BD765574B1E0} = {7B4F4969-EF5C-4861-8A46-A1F103AB1C11}
+		{CC1875FB-D172-40E6-A3F1-196D10B0632F} = {9F6C52CC-8048-4C42-92BE-778788D1DE9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA037AF3-B6E8-4F0E-A588-FED97C6C87ED}
