@@ -78,3 +78,4 @@ public class Prescricao : EntidadeBase<Prescricao>
 
         return erros;
     }
+}
