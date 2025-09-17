@@ -38,8 +38,9 @@ public class CadastrarRequisicaoEntradaViewModel
 public class VisualizarRequisicoesMedicamentoViewModel
 {
     public List<DetalhesRequisicaoEntradaViewModel> RequisicoesEntrada { get; set; }
+    public List<DetalhesRequisicaoSaidaViewModel> RequisicoesSaida { get; set; }
 
-    public VisualizarRequisicoesMedicamentoViewModel(List<RequisicaoEntrada> requisicoesEntrada)
+    public VisualizarRequisicoesMedicamentoViewModel(List<RequisicaoEntrada> requisicoesEntrada, List<RequisicaoSaida> requisicoesSaida)
     {
         RequisicoesEntrada = requisicoesEntrada
             .Select(r => new DetalhesRequisicaoEntradaViewModel(
@@ -48,6 +49,17 @@ public class VisualizarRequisicoesMedicamentoViewModel
                 r.Funcionario.Nome,
                 r.Medicamento.Nome,
                 r.QuantidadeRequisitada
+            ))
+            .ToList();
+
+        RequisicoesSaida = requisicoesSaida
+            .Select(r => new DetalhesRequisicaoSaidaViewModel(
+                r.Id,
+                r.DataOcorrencia,
+                r.Funcionario.Nome,
+                r.Prescricao.Paciente.Nome,
+                r.Prescricao.Descricao,
+                r.Prescricao.MedicamentosPrescritos
             ))
             .ToList();
     }
