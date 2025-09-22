@@ -1,32 +1,44 @@
 ﻿using ControleDeMedicamentos.WebApp.DependencyInjection;
 
-namespace ControleDeMedicamentos.WebApp
+namespace ControleDeMedicamentos.WebApp;
+
+public class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
+        var builder = WebApplication.CreateBuilder(args);
+
+        // Inje��o de depend�ncias criadas por n�s
+        builder.Services.AddCamadaInfraestrutura(builder.Configuration);
+
+        builder.Services.AddSerilogConfig(builder.Logging, builder.Configuration);
+
+        // Inje��o de depend�ncias da Microsoft.
+        builder.Services.AddControllersWithViews();
+
+        var app = builder.Build();
+
+        // Middleware - Fun��es que executam durante cada requisi��o e resposta HTTP
+        if (app.Environment.IsDevelopment())
         {
-            var builder = WebApplication.CreateBuilder(args);
-
-            builder.Services.AddCamadaInfraestrutura();
-
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
-
-            var app = builder.Build();
-
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
-
-            app.Run();
+            app.UseDeveloperExceptionPage();
         }
+        else
+        {
+            app.UseExceptionHandler("/Home/Error");
+        }
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+
+        app.UseAuthorization();
+
+        app.MapControllerRoute(
+            name: "default",
+            pattern: "{controller=Home}/{action=Index}/{id?}");
+
+        app.Run();
     }
 }

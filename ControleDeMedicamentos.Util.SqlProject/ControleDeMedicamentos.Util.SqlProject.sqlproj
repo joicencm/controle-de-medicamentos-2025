@@ -57,4 +57,10 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="TBFornecedor.sql" />
+    <Build Include="TBPaciente.sql" />
+    <Build Include="TBFuncionario.sql" />
+    <Build Include="TBMedicamento.sql" />
+  </ItemGroup>
 </Project>

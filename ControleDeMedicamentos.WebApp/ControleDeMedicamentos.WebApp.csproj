@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>7d2de8f9-d568-4a21-b5c1-6a31c190aaba</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ControleDeMedicamentos.Dominio\ControleDeMedicamentos.Dominio.csproj" />
     <ProjectReference Include="..\ControleDeMedicamentos.Infraestrutura.Arquivos\ControleDeMedicamentos.Infraestrutura.Arquivos.csproj" />
+    <ProjectReference Include="..\ControleDeMedicamentos.Infraestrutura.SqlServer\ControleDeMedicamentos.Infraestrutura.SqlServer.csproj" />
   </ItemGroup>
 
 </Project>
