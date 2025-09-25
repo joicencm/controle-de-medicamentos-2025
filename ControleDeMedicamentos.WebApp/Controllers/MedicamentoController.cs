@@ -1,4 +1,6 @@
 ﻿using ControleDeMedicamentos.Dominio.ModuloMedicamento;
+using ControleDeMedicamentos.Infraestrutura.Arquivos.ModuloFornecedor;
+using ControleDeMedicamentos.Infraestrutura.Arquivos.ModuloMedicamento;
 using ControleDeMedicamentos.Infraestrutura.SqlServer.ModuloFornecedor;
 using ControleDeMedicamentos.Infraestrutura.SqlServer.ModuloMedicamento;
 using ControleDeMedicamentos.WebApp.Models;
